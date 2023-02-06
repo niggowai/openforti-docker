@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  openfortivpn:
+    image: openfortivpn:latest
+    healthcheck:
+      test: ping -w 10.69.24.48 > /dev/null
+      interval: 10s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
+    ports:
+      - "587:587"
+      - "993:993"
+    devices:
+      - /dev/ppp
+    volumes:
+      - ./conf:/etc/openfortivpn/conf:ro
+      - ./forwarding-rules:/forwarding-rules:ro
+    cap_add:
+      - NET_ADMIN
