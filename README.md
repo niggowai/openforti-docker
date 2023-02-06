@@ -53,7 +53,7 @@ password = secret
 if your container fails, or just to be sure you may add following parameter with the sha-256 fingerprint of your server-certificate
 
 ~~~
-rusted-cert = b0719325763a427870b6dd1db4a6b4792fcb7d0b3f4af2471bb32641b38b73bb
+trusted-cert = b0719325763a427870b6dd1db4a6b4792fcb7d0b3f4af2471bb32641b38b73bb
 ~~~
 
 if you want your container to reconnect you can use following option with the time in seconds as cooldown to wait before trying again to reconnect
