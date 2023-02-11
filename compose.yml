@@ -4,7 +4,7 @@ services:
   openfortivpn:
     image: openfortivpn:latest
     healthcheck:
-      test: ping -w 10.69.24.48 > /dev/null
+      test: ping -w 1 10.69.24.48 > /dev/null
       interval: 10s
       retries: 5
       start_period: 10s
